@@ -1,0 +1,9 @@
+#canvas {
+  position: absolute;
+  z-index: 1;
+}
+
+#display {
+  position: absolute;
+  z-index: 0;
+}
