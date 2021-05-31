@@ -32,8 +32,6 @@ const handleMounseDown = (e) => {
   e.preventDefault();
   e.stopPropagation();
 
-  console.log('mouse down');
-
   // クリックした座標
   startX = parseInt(e.clientX - offsetX);
   startY = parseInt(e.clientY - offsetY);
@@ -42,6 +40,8 @@ const handleMounseDown = (e) => {
 }
 
 const handleMouseMove = (e) => {
+  e.preventDefault();
+  e.stopPropagation();
 
   if (!isDown) return;
   
@@ -61,6 +61,9 @@ const handleMouseMove = (e) => {
 }
 
 const handleMounseUp = () => {
+  e.preventDefault();
+  e.stopPropagation();
+
   conavasCtx.clearRect(0, 0, canvasElm.width, canvasElm.height);
   displayCtx.strokeRect(startX, startY, width, height);
   isDown = false;
