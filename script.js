@@ -60,7 +60,7 @@ const handleMouseMove = (e) => {
   conavasCtx.strokeRect(startX, startY, width, height);
 }
 
-const handleMounseUp = () => {
+const handleMounseUp = (e) => {
   e.preventDefault();
   e.stopPropagation();
 
